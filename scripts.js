@@ -22,6 +22,7 @@ class Player {
 } 
 
 //Add Test comment
+//Add this as well
 
 const playerSpades = new Player("Spades");
 const playerClubs = new Player("Clubs");
