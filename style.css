@@ -1,26 +1,28 @@
-.chessboard {
-  width: 640px;
-  height: 640px;
-  margin: 20px;
-  border: 25px solid rgb(18, 173, 31);
+.pageContainer {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
 }
-.black {
-  float: left;
-  width: 80px;
-  height: 80px;
-  background-color: #999;
-  font-size: 50px;
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
+
+.bullyboard {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  margin: auto;
+  height: 75vh;
+  width: 75vh;
+  outline: 0.1em solid rgb(170, 180, 24);
+  outline-offset: -0.1em;
+  border: .8em solid rgb(10, 68, 15);
+  grid-column-start: 2;
 }
-.white {
-  float: left;
-  width: 80px;
-  height: 80px;
-  background-color: #fff;
-  font-size: 50px;
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
+
+.innerSquares {
+  display: grid;
+  background-color: rgb(23, 112, 18);
+  border: .01em solid rgb(181, 235, 35);
+}
+
+.outerSquares {
+  display: grid;
+  background-color: rgb(42, 156, 13);
+  border: .01em solid rgb(132, 175, 13);
 }
