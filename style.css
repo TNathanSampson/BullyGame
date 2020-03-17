@@ -17,6 +17,7 @@
 
 .innerSquares {
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   background-color: rgb(23, 112, 18);
   border: .01em solid rgb(181, 235, 35);
 }
