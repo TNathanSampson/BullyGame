@@ -77,6 +77,8 @@ function dealHand(Player) {
 // console.log("Your Discard Pile: \n", playerSpades.discardPile, "\n");
 // console.log(`Your Chips: \n ${playerSpades.chips}`);
 
+//*****Start SPA code*****
+
 // import { Header, Nav, Main, Footer } from "./components";
 // import * as state from "./store";
 
