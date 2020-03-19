@@ -9,6 +9,7 @@
 }
 
 .bullyboard {
+  position: relative;
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
   margin: auto;
@@ -24,15 +25,23 @@
 }
 
 .innerSquares {
+  justify-content: flex-start;
+  align-content: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(5%, 10%));
   background-color: rgb(23, 112, 18);
-  border: .01em solid rgb(181, 235, 35);
+  border: 0.1em solid rgb(180, 228, 10);
 }
 
 .outerSquares {
+  justify-content: flex-start;
+  align-content: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(5%, 9.5%));
   background-color: rgb(42, 156, 13);
-  border: .01em solid rgb(132, 175, 13);
+  border: 0.1em solid rgb(180, 228, 10);
+}
+
+.card {
+  max-height: 95%;
 }
