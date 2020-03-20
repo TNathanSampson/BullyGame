@@ -1,5 +1,5 @@
-// export default st => `
-// <header>
-//   <h1>Example SPA: ${st.heading}</h1>
-// </header>
-// `;
+export default st => `
+<header>
+  <h2>Bully! ${st.heading}</h2>
+</header>
+`;

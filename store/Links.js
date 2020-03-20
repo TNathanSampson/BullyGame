@@ -1,6 +1,6 @@
-// export default [
-//   { title: "Home", text: "Home" },
-//   { title: "Bio", text: "Bio" },
-//   { title: "Gallery", text: "Gallery" },
-//   { title: "Form", text: "Submit A Photo" }
-// ];
+export default [
+  { title: "Home", text: "Home" },
+  { title: "Instruction", text: "How to Play" },
+  { title: "ChooseDeck", text: "Choose Your Deck" },
+  { title: "Board", text: "Let's Play" }
+];
