@@ -1,5 +1,5 @@
 export default st => `
 <header>
-  <h2>Bully! ${st.heading}</h2>
+  <h2>Bully! ${st.header}</h2>
 </header>
 `;

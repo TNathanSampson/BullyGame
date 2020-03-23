@@ -45,3 +45,59 @@
 .card {
   max-height: 95%;
 }
+
+#callToAction {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: rgb(23, 112, 18);
+}
+
+#callToAction > img {
+  width: 20%;
+  text-align: center;
+}
+
+#callToAction > h1 {
+  color: white;
+  text-align: center;
+}
+
+#callToAction > a {
+  text-decoration: none;
+  background-color: white;
+  font-size: 1.5em;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 549px){
+  .hidden--mobile {
+    display: none !important;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  nav > i {
+    padding: 1rem;
+    font-size: 2em;
+  }
+
+  nav > ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0;
+  }
+
+  nav > ul > li {
+    padding: .5rem;
+    list-style-type: none;
+  }

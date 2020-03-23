@@ -1,7 +1,7 @@
 export default () => `
 <section id="instructions">
   <h2>How to play Bully!</h2>
-  <img src="./images/aces.png" alt="me">
+  <img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/honors_spade-14.png?raw=true" alt="me">
   <p>How the Game is played in it's current state:
 
 The game will consist of two players. Each player has a deck of 13 cards; all the cards of a particular suit of a standard playing card deck, 2 through Ace of Hearts (for example). Cards have number values, 2-10 being obvious, and face cards assigned values of Jack - 11, Queen - 12, King - 13, and Ace - 14. Before play begins each player will draw 5 cards from the deck to place in their "Hand." Players may only put cards into play from their Hand.
