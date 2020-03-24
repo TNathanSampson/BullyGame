@@ -1,6 +1,6 @@
 export default () => `
 <div class="pageContainer">
-    <div class="bullyboard">
+    <div id="bullyboard">
   <!-- 1st -->
       <div class="outerSquares">
         <img class ="card" src="./images/2H.png" alt="Two of Hearts">

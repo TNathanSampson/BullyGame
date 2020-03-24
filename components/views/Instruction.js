@@ -1,5 +1,5 @@
 export default () => `
-<section id="instructions">
+<section id="instruction">
   <h2>How to play Bully!</h2>
   <img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/honors_spade-14.png?raw=true" alt="me">
   <p>How the Game is played in it's current state:
