@@ -34,5 +34,8 @@ export default () => `
       <div class="outerSquares"></div>
       <div class="outerSquares"></div>
     </div>
+    <p id="homeButton">
+      <a href="">"Quit"</a>
+    </p>
   </div>
 `;

@@ -19,6 +19,7 @@ function render(st = state.Home) {
 `;
   displayInstructions(st);
   playTheGame(st);
+  goHome(st);
   // addNavEventListeners();
   // addPicOnFormSubmit(st);
 }
@@ -41,6 +42,17 @@ function playTheGame(st) {
       .addEventListener("click", event => {
         event.preventDefault();
         render(state.Board);
+      });
+  }
+}
+
+function goHome(st) {
+  if (st.view === "Instructions" || "Board") {
+    document
+      .querySelector("#homeButton a")
+      .addEventListener("click", event => {
+        event.preventDefault();
+        render(state.Home);
       });
   }
 }
