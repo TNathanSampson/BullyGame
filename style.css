@@ -46,7 +46,7 @@
   max-height: 95%;
 }
 
-#callToAction {
+#callToAction > * {
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -56,22 +56,27 @@
   background-color: rgb(23, 112, 18);
 }
 
-#callToAction > img {
+#callToAction > div > img {
   width: 20%;
   text-align: center;
 }
 
-#callToAction > h1 {
+#callToAction > div > h1 {
   color: white;
   text-align: center;
 }
 
-#callToAction > a {
+#callToAction > div > a {
   text-decoration: none;
   background-color: white;
-  font-size: 1.5em;
-  padding: 1.5rem;
-  border-radius: 10px;
+  font-size: 1.3em;
+  padding: 1.3rem;
+  border-radius: 9px;
+}
+
+#instructions > img {
+  width: 20%;
+  text-align: center;
 }
 
 @media (max-width: 549px){
