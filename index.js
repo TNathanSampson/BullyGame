@@ -48,11 +48,9 @@ function playTheGame(st) {
 
 function goHome(st) {
   if (st.view === "Instructions" || "Board") {
-    document
-      .querySelector("#homeButton a")
-      .addEventListener("click", event => {
-        event.preventDefault();
-        render(state.Home);
-      });
+    document.querySelector("#homeButton a").addEventListener("click", event => {
+      event.preventDefault();
+      render(state.Home);
+    });
   }
 }
