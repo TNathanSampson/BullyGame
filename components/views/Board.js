@@ -1,5 +1,5 @@
 export default () => `
-<div class="pageContainer">
+<div id="pageContainer">
     <div id="bullyboard">
   <!-- 1st -->
       <div class="outerSquares">

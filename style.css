@@ -1,4 +1,13 @@
-.pageContainer {
+#instructionButton > a {
+    color: white;
+    text-align: center;
+    background-color: white;
+    font-size: 1.3em;
+    padding: 1.3rem;
+    border-radius: 9px;
+}
+
+#pageContainer {
   display: grid;
   grid-template-columns: 15% 70% 15%;
   grid-template-rows: 15% 70% 15%;
@@ -82,27 +91,6 @@
 @media (max-width: 549px){
   .hidden--mobile {
     display: none !important;
-  }
+}
 
-  nav {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
 
-  nav > i {
-    padding: 1rem;
-    font-size: 2em;
-  }
-
-  nav > ul {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 0;
-  }
-
-  nav > ul > li {
-    padding: .5rem;
-    list-style-type: none;
-  }
