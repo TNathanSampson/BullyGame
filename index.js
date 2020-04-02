@@ -18,6 +18,7 @@ function render(st = state.Home) {
   ${Footer()}
 `;
   displayInstructions(st);
+  chooseYourDeck(st);
   playTheGame(st);
   goHome(st);
   // addNavEventListeners();
@@ -35,7 +36,7 @@ function displayInstructions(st) {
   }
 }
 
-function playTheGame(st) {
+function chooseYourDeck(st) {
   if (st.view === "Home") {
     document
       .querySelector("#callToAction a")
@@ -46,8 +47,19 @@ function playTheGame(st) {
   }
 }
 
+function playTheGame(st) {
+  if (st.view === "ChooseDeck") {
+    document.querySelectorAll("#chooseDeck a").forEach(imageLink =>
+      imageLink.addEventListener("click", event => {
+        event.preventDefault();
+        render(state.Board);
+      })
+    );
+  }
+}
+
 function goHome(st) {
-  if (st.view === "Instructions" || "Board") {
+  if (st.view === "Instructions" || st.view === "Board") {
     document.querySelector("#homeButton a").addEventListener("click", event => {
       event.preventDefault();
       render(state.Home);
