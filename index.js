@@ -41,7 +41,7 @@ function playTheGame(st) {
       .querySelector("#callToAction a")
       .addEventListener("click", event => {
         event.preventDefault();
-        render(state.Board);
+        render(state.ChooseDeck);
       });
   }
 }

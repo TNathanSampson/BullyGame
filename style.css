@@ -1,10 +1,80 @@
+#callToAction > * {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: rgb(23, 112, 18);
+}
+
+#callToAction > div > img {
+  width: 10em;
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+#callToAction > div > h1 {
+  color: white;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+#callToAction > div > a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  font-size: 1.3em;
+  padding: 1.2rem;
+  border-radius: 2em;
+  margin-bottom: .01em;
+}
+
 #instructionButton > a {
-    color: white;
-    text-align: center;
-    background-color: white;
-    font-size: 1.3em;
-    padding: 1.3rem;
-    border-radius: 9px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  background-color: white;
+  font-size: 1.3em;
+  padding: 1.2rem;
+  border-radius: 2em;
+}
+
+#instructions > img {
+  width: 20%;
+  text-align: center;
+}
+
+#deckPageContainer {
+  display: flexbox;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 15% 70% 15%;
+  height: 100%;
+  width: 80vw;
+}
+
+#chooseDeck {
+  position: relative;
+  display: flexbox;
+  margin: 1em;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  outline: 0.1em solid rgb(170, 180, 24);
+  outline-offset: -0.1em;
+  border: .8em solid rgb(10, 68, 15);
+  background-color: rgb(23, 112, 18);
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.deck {
+  height: 40vw;
+  max-height: 15em;
+  margin-top: 1.75em;
+  margin-left: .75em;
+  margin-bottom: 2em;
 }
 
 #pageContainer {
@@ -53,39 +123,6 @@
 
 .card {
   max-height: 95%;
-}
-
-#callToAction > * {
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 90vh;
-  background-color: rgb(23, 112, 18);
-}
-
-#callToAction > div > img {
-  width: 20%;
-  text-align: center;
-}
-
-#callToAction > div > h1 {
-  color: white;
-  text-align: center;
-}
-
-#callToAction > div > a {
-  text-decoration: none;
-  background-color: white;
-  font-size: 1.3em;
-  padding: 1.3rem;
-  border-radius: 9px;
-}
-
-#instructions > img {
-  width: 18%;
-  text-align: center;
 }
 
 @media (max-width: 549px){
