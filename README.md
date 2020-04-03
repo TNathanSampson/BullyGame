@@ -5,7 +5,7 @@ Bully (working title) is meant to be a simple card game that pits one player vs 
 
 Content Outline:
 
-In the BullyGame project I will create a functional game in which a user may play against an "AI" opponent, and possibly include an option for Player vs Player. The appllication will include a Home Page, a page with Instructions, a page where the user chooses the Suit of cards they wish to use in the game, and finally the Game Board itself, with all it's components and actions. From a production standpoint, the Game Board will require the overwhelming majority of the work.
+In the BullyGame project I will create a functional game in which a user may play against an "AI" opponent, and possibly include an option for Player vs Player. The application will include a Home Page, a page with Instructions, a page where the user chooses the Suit of cards they wish to use in the game, and finally the Game Board itself, with all it's components and actions. From a production standpoint, the Game Board will require the overwhelming majority of the work.
 
 Link to my Wireframe (created in Draw.io) stored on Google Drive:
 https://drive.google.com/file/d/1nhHhNbrNbUINDJbT6T1A0T0vvpjDeezm/view?usp=sharing

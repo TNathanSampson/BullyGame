@@ -60,7 +60,7 @@ function playTheGame(st) {
 
 function goHome(st) {
   if (st.view === "Instructions" || st.view === "Board") {
-    document.querySelector("#homeButton a").addEventListener("click", event => {
+    document.querySelector(".homeButton a").addEventListener("click", event => {
       event.preventDefault();
       render(state.Home);
     });
