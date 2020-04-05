@@ -5,15 +5,9 @@ export default () => `
   </p>
   <div id="bullyBoard">
   <!-- 1st -->
-    <div id="a4" class="outerSquares">
-      <img class ="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/2H.png?raw=true">
-      <img class ="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/3H.png?raw=true">
-      <img class ="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/4H.png?raw=true">
-      <img class ="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/5H.png?raw=true">
-      <img class ="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/6H.png?raw=true">
-    </div>
+    <div id="a4" class="outerSquares"></div>
     <div id="b4" class="outerSquares">
-      <img class ="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/2S.png?raw=true">
+      <img class ="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/2_Spades.png?raw=true">
     </div>
     <div id="c4" class="outerSquares"></div>
     <div id="d4" class="outerSquares"></div>
@@ -42,27 +36,27 @@ export default () => `
   <!-- Player Hand -->
     <div id="playerHand">
       <h5>YOUR HAND:</h5>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/2_Hearts.png?raw=true">
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/3_Hearts.png?raw=true">
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/4_Hearts.png?raw=true">
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/5_Hearts.png?raw=true">
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/6_Hearts.png?raw=true">
     </div>
     <div id="playerDeck">
       <h5>YOUR DECK:</h5>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+      <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
     </div>
   </div>
 <!-- Opponent Items -->
@@ -82,19 +76,6 @@ export default () => `
     </div>
     <div id="opponentDeck">
       <h6>OPPONENT DECK:</h6>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
-      <div id=""></div>
     </div>
   </div>
 </div>

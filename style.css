@@ -148,11 +148,16 @@
   justify-items: left;
 }
 
+#playerHand > img {
+  max-width: 35%;
+  max-height: 35%;
+}
+
 #playerDeck {
   align-items: flex-start;
   justify-items: flex-start;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5%, 10%));
+  grid-template-columns: repeat(auto-fit, minmax(3%, 5%));
 }
 
 #opponentContainer {

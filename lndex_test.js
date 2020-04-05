@@ -4,20 +4,68 @@ class Player {
       [
         2,
         `Two of  ${deck}`,
-        `https://github.com/TNathanSampson/BullyGame/blob/master/images/2_Hearts.png?raw=true`
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/2_${deck}.png?raw=true`
       ],
-      [3, `Three of  ${deck}`],
-      [4, `Four of  ${deck}`],
-      [5, `Five of  ${deck}`],
-      [6, `Six of  ${deck}`],
-      [7, `Seven of  ${deck}`],
-      [8, `Eight of  ${deck}`],
-      [9, `Nine of  ${deck}`],
-      [10, `Ten of  ${deck}`],
-      [11, `Jack of  ${deck}`],
-      [12, `Queen of  ${deck}`],
-      [13, `King of  ${deck}`],
-      [14, `Ace of  ${deck}`]
+      [
+        3,
+        `Three of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/3_${deck}.png?raw=true`
+      ],
+      [
+        4,
+        `Four of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/4_${deck}.png?raw=true`
+      ],
+      [
+        5,
+        `Five of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/5_${deck}.png?raw=true`
+      ],
+      [
+        6,
+        `Six of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/6_${deck}.png?raw=true`
+      ],
+      [
+        7,
+        `Seven of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/7_${deck}.png?raw=true`
+      ],
+      [
+        8,
+        `Eight of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/8_${deck}.png?raw=true`
+      ],
+      [
+        9,
+        `Nine of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/9_${deck}.png?raw=true`
+      ],
+      [
+        10,
+        `Ten of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/10_${deck}.png?raw=true`
+      ],
+      [
+        11,
+        `Jack of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/J_${deck}.png?raw=true`
+      ],
+      [
+        12,
+        `Queen of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/Q_${deck}.png?raw=true`
+      ],
+      [
+        13,
+        `King of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/K_${deck}.png?raw=true`
+      ],
+      [
+        14,
+        `Ace of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/A_${deck}.png?raw=true`
+      ]
     ];
     this.back = "";
     this.hand = [];
