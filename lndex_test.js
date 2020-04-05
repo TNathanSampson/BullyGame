@@ -1,7 +1,11 @@
 class Player {
   constructor(deck) {
     this.deck = [
-      [2, `Two of  ${deck}`],
+      [
+        2,
+        `Two of  ${deck}`,
+        `https://github.com/TNathanSampson/BullyGame/blob/master/images/2_Hearts.png?raw=true`
+      ],
       [3, `Three of  ${deck}`],
       [4, `Four of  ${deck}`],
       [5, `Five of  ${deck}`],
@@ -15,6 +19,7 @@ class Player {
       [13, `King of  ${deck}`],
       [14, `Ace of  ${deck}`]
     ];
+    this.back = "";
     this.hand = [];
     this.discardPile = [];
     this.chips = 0;

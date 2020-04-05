@@ -8,6 +8,7 @@ export default () => `
     <p id="instructionButton">
       <a href="">Instructions</a>
     </p>
+    <p></p>
   </div>
 </section>
 `;

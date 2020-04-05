@@ -37,11 +37,11 @@ export default () => `
   <div id="playerContainer">
   <!-- Player Chips -->
     <div id="playerChips">
-      <div id="playerChips">
-      </div>
+      <h5>YOUR CHIPS:</h5>
     </div>
   <!-- Player Hand -->
     <div id="playerHand">
+      <h5>YOUR HAND:</h5>
       <div id=""></div>
       <div id=""></div>
       <div id=""></div>
@@ -49,6 +49,39 @@ export default () => `
       <div id=""></div>
     </div>
     <div id="playerDeck">
+      <h5>YOUR DECK:</h5>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+    </div>
+  </div>
+<!-- Opponent Items -->
+  <div id="opponentContainer">
+  <!-- Opponent Chips -->
+    <div id="enemyChips">
+      <h6>OPPONENT CHIPS:</h6>
+    </div>
+<!-- Opponent Hand -->
+    <div id="playerHand">
+      <h6>OPPONENT HAND:</h6>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+    </div>
+    <div id="opponentDeck">
+      <h6>OPPONENT DECK:</h6>
       <div id=""></div>
       <div id=""></div>
       <div id=""></div>
