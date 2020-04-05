@@ -33,5 +33,36 @@ export default () => `
     <div id="c1" class="outerSquares"></div>
     <div id="d1" class="outerSquares"></div>
   </div>
+<!-- Player Items -->
+  <div id="playerContainer">
+  <!-- Player Chips -->
+    <div id="playerChips">
+      <div id="playerChips">
+      </div>
+    </div>
+  <!-- Player Hand -->
+    <div id="playerHand">
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+    </div>
+    <div id="playerDeck">
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+      <div id=""></div>
+    </div>
+  </div>
 </div>
 `;

@@ -110,13 +110,26 @@
 
 #pageContainer {
   display: grid;
-  grid-template-columns: 5% 75% 20%;
+  grid-template-columns: 20% 50% 30%;
   grid-template-rows: 5% 80% 15%;
   height: 100vh;
   width: 100vw;
   max-width: 100%;
   max-height: 100%;
   margin: auto;
+}
+
+#playerContainer {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 15% 60% 25%;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  grid-column-start: 3;
+  grid-row-start: 2;
 }
 
 #bullyBoard {
