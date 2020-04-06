@@ -1,5 +1,5 @@
 export default () => `
 <footer>
-  &copy; 2020 <a href="https://BullyGame.com/">Nathan Sampson</a>
+  &copy; 2020 <a href="https://bullygame.netlify.com/">Nathan Sampson</a>
 </footer>
 `;

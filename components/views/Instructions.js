@@ -1,6 +1,6 @@
 export default () => `
 <section id="instructions">
-  <img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/honors_spade-14.png?raw=true" alt="Royal Flush">
+  <img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/honors_spade-14.png?raw=true" alt="Honor of Spades">
   <div>
     <h3>How the Game is played in it's current state:</h3>
 
