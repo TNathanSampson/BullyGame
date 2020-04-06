@@ -27,8 +27,9 @@
   background-color: white;
   font-size: 1.3em;
   padding: 1.2rem;
-  border-radius: 2em;
+  border-radius: 0.5em;
   margin-bottom: 0.01em;
+  box-shadow: -3px 3px 4px 2px rgba(0, 0, 0, 0.4);
 }
 
 #instructionButton > a {
@@ -38,7 +39,8 @@
   background-color: white;
   font-size: 1.3em;
   padding: 1.2rem;
-  border-radius: 2em;
+  border-radius: 0.5em;
+  box-shadow: -3px 3px 4px 2px rgba(0, 0, 0, 0.4);
 }
 
 /* Instruction Page */
@@ -72,10 +74,11 @@
   justify-self: center;
   color: white;
   background-color: rgb(10, 68, 15);
-  font-size: 1em;
-  padding: 0.75em;
-  border-radius: 1.5em;
+  font-size: 1.2em;
+  padding: 0.9em;
+  border-radius: 0.5em;
   margin: 1em;
+  box-shadow: -2px 2px 4px 2px rgba(0, 0, 0, 0.5);
 }
 
 #deckPageContainer {
