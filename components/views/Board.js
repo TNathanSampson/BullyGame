@@ -8,6 +8,9 @@ export default () => `
     <div id="a4" class="outerSquares"></div>
     <div id="b4" class="outerSquares">
       <img class ="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/2_Spades.png?raw=true">
+      <img class ="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/3_Spades.png?raw=true">
+      <img class ="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/4_Spades.png?raw=true">
+      <img class ="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/5_Spades.png?raw=true">
     </div>
     <div id="c4" class="outerSquares"></div>
     <div id="d4" class="outerSquares"></div>

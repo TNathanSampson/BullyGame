@@ -217,6 +217,16 @@
   border: 0.1em solid rgb(180, 228, 10);
 }
 
+.innerSquares > img {
+  width: auto;
+  max-height: 95%;
+}
+
+.outerSquares > img {
+  width: auto;
+  max-height: 95%;
+}
+
 .card {
   max-height: 95%;
 }
