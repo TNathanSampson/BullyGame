@@ -1,3 +1,4 @@
+/* Home Page */
 #callToAction > * {
   background-size: cover;
   display: flex;
@@ -40,6 +41,8 @@
   border-radius: 2em;
 }
 
+/* Instruction Page */
+
 #instructions {
   display: flex;
   flex-wrap: wrap;
@@ -49,6 +52,7 @@
 
 #instructions > img {
   width: 15em;
+  height: auto;
   text-align: center;
 }
 
