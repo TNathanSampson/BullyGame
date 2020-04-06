@@ -133,7 +133,7 @@
 #playerContainer {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 15% 60% 25%;
+  grid-template-rows: 5% 11% 5% 23% 5% 23% 5% 23%;
   height: 100%;
   width: 100%;
   max-width: 100%;
@@ -145,23 +145,26 @@
 
 #playerContainer > * > h5 {
   margin: 0.1em;
+  align-self: flex-end;
 }
 
 #playerChips {
   display: flex;
   align-content: flex-start;
   justify-items: left;
+  grid-row-start: 2;
 }
 
 #playerHand {
   display: flex;
   align-content: flex-start;
   justify-items: left;
+  grid-row-start: 4;
 }
 
 #playerHand > img {
-  max-width: 35%;
-  max-height: 35%;
+  width: auto;
+  max-height: 17.75vh;
 }
 
 #playerDeck {
@@ -169,6 +172,15 @@
   justify-items: flex-start;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(3%, 5%));
+  grid-row-start: 6;
+}
+
+#playerDiscardPile {
+  align-items: flex-start;
+  justify-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3%, 5%));
+  grid-row-start: 8;
 }
 
 #opponentContainer {

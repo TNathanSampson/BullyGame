@@ -33,20 +33,20 @@ export default () => `
 <!-- Player Items -->
   <div id="playerContainer">
   <!-- Player Chips -->
+    <div style="grid-row-start:1;display:flex"><h5>YOUR CHIPS:</h5></div>
     <div id="playerChips">
-      <h5>YOUR CHIPS:</h5>
     </div>
   <!-- Player Hand -->
+    <div style="grid-row-start:3;display:flex"><h5>YOUR HAND:</h5></div>
     <div id="playerHand">
-      <h5>YOUR HAND:</h5>
       <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/2_Hearts.png?raw=true">
       <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/3_Hearts.png?raw=true">
       <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/4_Hearts.png?raw=true">
       <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/5_Hearts.png?raw=true">
       <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/6_Hearts.png?raw=true">
     </div>
+    <div style="grid-row-start:5;display:flex"><h5>YOUR DECK:</h5></div>
     <div id="playerDeck">
-      <h5>YOUR DECK:</h5>
       <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
       <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
       <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
@@ -60,6 +60,9 @@ export default () => `
       <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
       <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
       <img class="card" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/red_back.png?raw=true"></<img>
+    </div>
+    <div style="grid-row-start:7;display:flex"><h5>YOUR DISCARD PILE:</h5></div>
+    <div id="playerDiscardPile">
     </div>
   </div>
 <!-- Opponent Items -->
