@@ -199,10 +199,6 @@
   grid-row-start: 2;
 }
 
-#bullyBoard > div > img {
-  max-height: 95%;
-}
-
 .innerSquares {
   justify-items: flex-start;
   align-items: center;
@@ -222,7 +218,7 @@
 }
 
 .card {
-  max-height: 95%;
+  max-height: 17.75vh;
 }
 
 @media (max-width: 549px){
