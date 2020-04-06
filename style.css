@@ -199,6 +199,10 @@
   grid-row-start: 2;
 }
 
+#bullyBoard > div > img {
+  max-height: 95%;
+}
+
 .innerSquares {
   justify-items: flex-start;
   align-items: center;
@@ -215,16 +219,6 @@
   grid-template-columns: repeat(auto-fit, minmax(5%, 9.5%));
   background-color: rgb(42, 156, 13);
   border: 0.1em solid rgb(180, 228, 10);
-}
-
-.innerSquares > img {
-  width: auto;
-  max-height: 95%;
-}
-
-.outerSquares > img {
-  width: auto;
-  max-height: 95%;
 }
 
 .card {
