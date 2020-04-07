@@ -71,14 +71,19 @@ function goHome(st) {
 
 function fillListeners() {
   //Fill Listeners
-  const fill = document.querySelector(".handCard");
-  const empties = document.querySelectorAll(".empty");
+  const fill = document.querySelectorAll(".handCard");
+  const empties = document.querySelectorAll(".outerSquares");
 
-  fill.addEventListener("dragstart", dragStart);
-  fill.addEventListener("dragend", dragEnd);
+  fill.forEach(card => card.addEventListener("dragstart", dragStart));
+  fill.forEach(card => card.addEventListener("dragend", dragEnd));
 
   // Loop Through empties and call drag events
-
+  for (const empty of empties) {
+    empty.addEventListener("dragover", dragOver);
+    empty.addEventListener("dragenter", dragEnter);
+    empty.addEventListener("dragleave", dragLeave);
+    empty.addEventListener("drop", dragDrop);
+  }
   //Drag Functions
   function dragStart() {
     this.className += " hold";
@@ -87,5 +92,24 @@ function fillListeners() {
 
   function dragEnd() {
     this.className = "handCard";
+  }
+
+  function dragOver(ev) {
+    ev.preventDefault();
+  }
+
+  function dragEnter(ev) {
+    ev.preventDefault();
+    this.className += " hovered";
+  }
+
+  function dragLeave() {
+    this.className = "outerSquares";
+  }
+  //Store the Click here
+  function dragDrop() {
+    this.className = "outerSquares";
+    this.append(fill);
+    console.log(fill);
   }
 }

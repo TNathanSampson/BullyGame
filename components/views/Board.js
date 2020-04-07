@@ -36,13 +36,13 @@ export default () => `
     <div id="playerHand">
       <div class="handCard" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/2_Hearts.png?raw=true">
       </div>
-      <div><img class="handCard" draggable="true" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/3_Hearts.png?raw=true">
+      <div class="handCard" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/3_Hearts.png?raw=true">
       </div>
-      <div><img class="handCard" draggable="true" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/4_Hearts.png?raw=true">
+      <div class="handCard" draggable="true"><img  src="https://github.com/TNathanSampson/BullyGame/blob/master/images/4_Hearts.png?raw=true">
       </div>
-      <div><img class="handCard" draggable="true" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/5_Hearts.png?raw=true">
+      <div class="handCard" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/5_Hearts.png?raw=true">
       </div>
-      <div><img class="handCard" draggable="true" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/6_Hearts.png?raw=true">
+      <div class="handCard" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/6_Hearts.png?raw=true">
       </div>
     </div>
     <div style="grid-row-start:5;display:flex"><h5>YOUR DECK:</h5></div>
