@@ -21,10 +21,12 @@ function render(st = state.Home) {
   chooseYourDeck(st);
   playTheGame(st);
   goHome(st);
+  fillListeners();
   // addNavEventListeners();
   // addPicOnFormSubmit(st);
 }
 
+//Event Listeners
 function displayInstructions(st) {
   if (st.view === "Home") {
     document
@@ -64,5 +66,26 @@ function goHome(st) {
       event.preventDefault();
       render(state.Home);
     });
+  }
+}
+
+function fillListeners() {
+  //Fill Listeners
+  const fill = document.querySelector(".handCard");
+  const empties = document.querySelectorAll(".empty");
+
+  fill.addEventListener("dragstart", dragStart);
+  fill.addEventListener("dragend", dragEnd);
+
+  // Loop Through empties and call drag events
+
+  //Drag Functions
+  function dragStart() {
+    this.className += " hold";
+    setTimeout(() => (this.className = "invisible"), 0);
+  }
+
+  function dragEnd() {
+    this.className = "handCard";
   }
 }

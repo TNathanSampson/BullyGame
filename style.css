@@ -162,7 +162,7 @@
   grid-row-start: 4;
 }
 
-#playerHand > img {
+#playerHand > div > img {
   width: auto;
   max-height: 17.75vh;
 }
@@ -231,6 +231,26 @@
 
 .card {
   max-height: 17.75vh;
+}
+
+.handCard {
+  cursor: pointer;
+}
+
+.hold {
+  border: solid #cccccc 4px;
+}
+
+.hovered {
+  background: #f4f4f4;
+}
+
+.invisible {
+  display: none;
+}
+
+.invisible > img {
+  display: none;
 }
 
 @media (max-width: 549px){

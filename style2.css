@@ -1,0 +1,7 @@
+.twoHearts {
+  background-image: url("https://github.com/TNathanSampson/BullyGame/blob/master/images/2_Hearts.png?raw=true");
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  width: auto;
+}
