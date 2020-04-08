@@ -229,11 +229,36 @@
   border: 0.1em solid rgb(180, 228, 10);
 }
 
+.outerSquares > div > img {
+  width: auto;
+  max-height: 17.75vh;
+}
+
 .card {
   max-height: 17.75vh;
 }
 
 .handCard {
+  cursor: pointer;
+}
+
+.handCardOne {
+  cursor: pointer;
+}
+
+.handCardTwo {
+  cursor: pointer;
+}
+
+.handCardThree {
+  cursor: pointer;
+}
+
+.handCardFour {
+  cursor: pointer;
+}
+
+.handCardFive {
   cursor: pointer;
 }
 

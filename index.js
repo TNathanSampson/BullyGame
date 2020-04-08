@@ -21,7 +21,8 @@ function render(st = state.Home) {
   chooseYourDeck(st);
   playTheGame(st);
   goHome(st);
-  fillListeners();
+  //fillListenerOne();
+  fillListenerTwo();
   // addNavEventListeners();
   // addPicOnFormSubmit(st);
 }
@@ -69,13 +70,13 @@ function goHome(st) {
   }
 }
 
-function fillListeners() {
+function fillListenerOne() {
   //Fill Listeners
-  const fill = document.querySelectorAll(".handCard");
+  const fill = document.querySelector(".handCardOne");
   const empties = document.querySelectorAll(".outerSquares");
 
-  fill.forEach(card => card.addEventListener("dragstart", dragStart));
-  fill.forEach(card => card.addEventListener("dragend", dragEnd));
+  fill.addEventListener("dragstart", dragStart);
+  fill.addEventListener("dragend", dragEnd);
 
   // Loop Through empties and call drag events
   for (const empty of empties) {
@@ -91,7 +92,7 @@ function fillListeners() {
   }
 
   function dragEnd() {
-    this.className = "handCard";
+    this.className = "handCardOne";
   }
 
   function dragOver(ev) {
@@ -110,6 +111,58 @@ function fillListeners() {
   function dragDrop() {
     this.className = "outerSquares";
     this.append(fill);
-    console.log(fill);
   }
 }
+
+function fillListenerTwo() {
+  //Fill Listeners
+  const cardItems = document.querySelectorAll(".handCard");
+  const emptySquares = document.querySelectorAll(".outerSquares");
+
+  let draggedItem = null;
+
+  for (let i = 0; i < cardItems.length; i++) {
+    const card = cardItems[i];
+
+    card.addEventListener("dragstart", function(ev) {
+      draggedItem = card;
+      setTimeout(function() {
+        card.style.display = "none";
+      });
+    });
+
+    card.addEventListener("dragend", function() {
+      setTimeout(function() {
+        draggedItem.style.display = "block";
+        draggedItem = null;
+      }, 0);
+    });
+
+    for (let j = 0; j < emptySquares.length; j++) {
+      const square = emptySquares[j];
+
+      square.addEventListener("dragover", function(ev) {
+        ev.preventDefault();
+      });
+      square.addEventListener("dragenter", function(ev) {
+        ev.preventDefault();
+      });
+      square.addEventListener("drop", function(ev) {
+        this.append(draggedItem);
+      });
+    }
+  }
+}
+// const fillTwo = document.querySelector(".handCardTwo");
+// const fillThree = document.querySelector(".handCardThree");
+// const fillFour = document.querySelector(".handCardFour");
+// const fillFive = document.querySelector(".handCardFive");
+
+// fillTwo.addEventListener("dragstart", dragStart);
+// fillTwo.addEventListener("dragend", dragEnd);
+// fillThree.addEventListener("dragstart", dragStart);
+// fillThree.addEventListener("dragend", dragEnd);
+// fillFour.addEventListener("dragstart", dragStart);
+// fillFour.addEventListener("dragend", dragEnd);
+// fillFive.addEventListener("dragstart", dragStart);
+// fillFive.addEventListener("dragend", dragEnd);
