@@ -211,6 +211,10 @@
   grid-row-start: 2;
 }
 
+.dropSpace {
+  cursor: auto;
+}
+
 .innerSquares {
   justify-items: flex-start;
   align-items: center;
@@ -239,26 +243,6 @@
 }
 
 .handCard {
-  cursor: pointer;
-}
-
-.handCardOne {
-  cursor: pointer;
-}
-
-.handCardTwo {
-  cursor: pointer;
-}
-
-.handCardThree {
-  cursor: pointer;
-}
-
-.handCardFour {
-  cursor: pointer;
-}
-
-.handCardFive {
   cursor: pointer;
 }
 

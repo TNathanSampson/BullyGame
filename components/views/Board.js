@@ -5,25 +5,25 @@ export default () => `
   </p>
   <div id="bullyBoard">
   <!-- 1st -->
-    <div id="a4" class="outerSquares empty"></div>
-    <div id="b4" class="outerSquares empty"></div>
-    <div id="c4" class="outerSquares empty"></div>
-    <div id="d4" class="outerSquares empty"></div>
+    <div id="a4" class="outerSquares dropSpace"></div>
+    <div id="b4" class="outerSquares dropSpace"></div>
+    <div id="c4" class="outerSquares dropSpace"></div>
+    <div id="d4" class="outerSquares dropSpace"></div>
   <!-- 2nd -->
-    <div id="a3" class="outerSquares empty"></div>
-    <div id="b3" class="innerSquares empty"></div>
-    <div id="c3" class="innerSquares empty"></div>
-    <div id="d3" class="outerSquares empty"></div>
+    <div id="a3" class="outerSquares dropSpace"></div>
+    <div id="b3" class="innerSquares dropSpace"></div>
+    <div id="c3" class="innerSquares dropSpace"></div>
+    <div id="d3" class="outerSquares dropSpace"></div>
 <!-- 3rd -->
-    <div id="a2" class="outerSquares empty"></div>
-    <div id="b2" class="innerSquares empty"></div>
-    <div id="c2" class="innerSquares empty"></div>
-    <div id="d2" class="outerSquares empty"></div>
+    <div id="a2" class="outerSquares dropSpace"></div>
+    <div id="b2" class="innerSquares dropSpace"></div>
+    <div id="c2" class="innerSquares dropSpace"></div>
+    <div id="d2" class="outerSquares dropSpace"></div>
 <!-- 4th -->
-    <div id="a1" class="outerSquares empty"></div>
-    <div id="b1" class="outerSquares empty"></div>
-    <div id="c1" class="outerSquares empty"></div>
-    <div id="d1" class="outerSquares empty"></div>
+    <div id="a1" class="outerSquares dropSpace"></div>
+    <div id="b1" class="outerSquares dropSpace"></div>
+    <div id="c1" class="outerSquares dropSpace"></div>
+    <div id="d1" class="outerSquares dropSpace"></div>
   </div>
 <!-- Player Items -->
   <div id="playerContainer">
