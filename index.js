@@ -21,10 +21,7 @@ function render(st = state.Home) {
   chooseYourDeck(st);
   playTheGame(st);
   goHome(st);
-  //fillListenerOne();
   fillListenerTwo();
-  // addNavEventListeners();
-  // addPicOnFormSubmit(st);
 }
 
 //Event Listeners
@@ -70,52 +67,8 @@ function goHome(st) {
   }
 }
 
-function fillListenerOne() {
-  //Fill Listeners
-  const fill = document.querySelector(".handCardOne");
-  const empties = document.querySelectorAll(".outerSquares");
-
-  fill.addEventListener("dragstart", dragStart);
-  fill.addEventListener("dragend", dragEnd);
-
-  // Loop Through empties and call drag events
-  for (const empty of empties) {
-    empty.addEventListener("dragover", dragOver);
-    empty.addEventListener("dragenter", dragEnter);
-    empty.addEventListener("dragleave", dragLeave);
-    empty.addEventListener("drop", dragDrop);
-  }
-  //Drag Functions
-  function dragStart() {
-    this.className += " hold";
-    setTimeout(() => (this.className = "invisible"), 0);
-  }
-
-  function dragEnd() {
-    this.className = "handCardOne";
-  }
-
-  function dragOver(ev) {
-    ev.preventDefault();
-  }
-
-  function dragEnter(ev) {
-    ev.preventDefault();
-    this.className += " hovered";
-  }
-
-  function dragLeave() {
-    this.className = "outerSquares";
-  }
-  //Store the Click here
-  function dragDrop() {
-    this.className = "outerSquares";
-    this.append(fill);
-  }
-}
-
+//Fill Listeners
 function fillListenerTwo() {
-  //Fill Listeners
   const cardItems = document.querySelectorAll(".handCard");
   const emptySquares = document.querySelectorAll(".outerSquares");
 
@@ -146,8 +99,13 @@ function fillListenerTwo() {
       });
       square.addEventListener("dragenter", function(ev) {
         ev.preventDefault();
+        this.className += " hovered";
+      });
+      square.addEventListener("dragleave", function(ev) {
+        this.className = "outerSquares";
       });
       square.addEventListener("drop", function(ev) {
+        this.className = "outerSquares";
         this.append(draggedItem);
       });
     }
