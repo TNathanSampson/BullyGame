@@ -21,11 +21,11 @@ function render(st = state.Home) {
   chooseYourDeck(st);
   playTheGame(st);
   goHome(st);
-  fillListenerTwo();
+  dragNDropListener();
   dealCards(st);
 }
 
-//Event Listeners
+//Event Listeners: Page Buttons
 function displayInstructions(st) {
   if (st.view === "Home") {
     document
@@ -48,7 +48,6 @@ function chooseYourDeck(st) {
   }
 }
 
-//New playTheGame Listener
 function playTheGame(st) {
   if (st.view === "ChooseDeck") {
     const deckBacks = document.querySelectorAll(".deck");
@@ -78,6 +77,7 @@ function goHome(st) {
   }
 }
 
+//Event Listeners: Card Dealers
 function dealCards(st) {
   if (st.view === "Board") {
     document.querySelector(".dealDeck").addEventListener("click", function(ev) {
@@ -116,8 +116,8 @@ function dealCards(st) {
   }
 }
 
-//Fill Listeners
-function fillListenerTwo() {
+//Drag n Drop Listeners
+function dragNDropListener() {
   const cardItems = document.querySelectorAll(".handCard");
   const emptySquares = document.querySelectorAll(".outerSquares");
   const emptyInnerSquares = document.querySelectorAll(".innerSquares");
@@ -181,6 +181,7 @@ function fillListenerTwo() {
   }
 }
 
+//Player Class
 class Player {
   constructor(deck) {
     this.deck = [
