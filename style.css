@@ -309,6 +309,11 @@
   border: 0.1em solid rgb(180, 228, 10);
 }
 
+.innerSquares > div > img {
+  width: auto;
+  max-height: 17.75vh;
+}
+
 .outerSquares {
   justify-items: flex-start;
   align-items: center;

@@ -120,6 +120,7 @@ function dealCards(st) {
 function fillListenerTwo() {
   const cardItems = document.querySelectorAll(".handCard");
   const emptySquares = document.querySelectorAll(".outerSquares");
+  const emptyInnerSquares = document.querySelectorAll(".innerSquares");
 
   let draggedItem = null;
 
@@ -155,6 +156,25 @@ function fillListenerTwo() {
       });
       square.addEventListener("drop", function(ev) {
         this.className = "outerSquares";
+        this.append(draggedItem);
+      });
+    }
+
+    for (let k = 0; k < emptyInnerSquares.length; k++) {
+      const innerSquare = emptyInnerSquares[k];
+
+      innerSquare.addEventListener("dragover", function(ev) {
+        ev.preventDefault();
+      });
+      innerSquare.addEventListener("dragenter", function(ev) {
+        ev.preventDefault();
+        this.className += " hovered";
+      });
+      innerSquare.addEventListener("dragleave", function(ev) {
+        this.className = "innerSquares";
+      });
+      innerSquare.addEventListener("drop", function(ev) {
+        this.className = "innerSquares";
         this.append(draggedItem);
       });
     }
