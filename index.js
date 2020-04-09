@@ -23,6 +23,7 @@ function render(st = state.Home) {
   goHome(st);
   dragNDropListener();
   dealCards(st);
+  dealPlayerHand(st);
 }
 
 //Event Listeners: Page Buttons
@@ -110,14 +111,37 @@ function dealCards(st) {
       let cardBack13 = cardBack.cloneNode(true);
       deckOfCards.append(cardBack13);
       this.className += " invisible";
-      let dealHand = document.querySelector(".dealHand");
-      dealHand.className = "dealHand";
+      let dealHand = document.querySelector(".dealPlayerHand");
+      dealHand.className = "dealPlayerHand";
     });
   }
 }
 
+function dealPlayerHand(st) {
+  if (st.view === "Board") {
+    document
+      .querySelector(".dealPlayerHand")
+      .addEventListener("click", function(ev) {
+        playerHearts.dealHand();
+        const handArray = playerHearts.hand;
+        const playerHand = document.getElementById("playerHand");
+        for (let i = 0; i < handArray.length; i++) {
+          let cardSource = handArray[i][2];
+          let drawnCard = document.createElement("div");
+          let cardImage = document.createElement("img");
+          drawnCard.className = "handCard";
+          drawnCard.draggable = true;
+          cardImage.src = cardSource;
+          drawnCard.append(cardImage);
+          playerHand.append(drawnCard);
+        }
+      });
+  }
+  dragNDropListener();
+}
+
 //Drag n Drop Listeners
-function dragNDropListener() {
+function dragNDropListener(st) {
   const cardItems = document.querySelectorAll(".handCard");
   const emptySquares = document.querySelectorAll(".outerSquares");
   const emptyInnerSquares = document.querySelectorAll(".innerSquares");
@@ -260,7 +284,7 @@ class Player {
     function getRandomCard(numOfCards) {
       return Math.floor(Math.random() * Math.floor(numOfCards));
     }
-    for (let i = 0; i < 5 && this.deck.length > 0; i++) {
+    for (let i = this.hand.length; i < 5 && this.deck.length > 0; i++) {
       let cardsInDeck = this.deck.length;
       let cardNumber = getRandomCard(cardsInDeck);
       this.hand.push(this.deck[cardNumber]);
