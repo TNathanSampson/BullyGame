@@ -1,9 +1,8 @@
 export default () => `
 <div id="pageContainer">
-  <p class="homeButton">
-    <a href="">QUIT?</a>
-  </p>
+  <p class="homeButton"><a href="">QUIT?</a></p>
   <p class="dealDeck">DEAL!</p>
+  <p class="dealHand invisible">Deal Hand</p>
   <div id="bullyBoard">
   <!-- 1st -->
     <div id="a4" class="outerSquares dropSpace"></div>
@@ -45,10 +44,10 @@ export default () => `
 <!-- Opponent Items -->
   <div id="opponentContainer">
   <!-- Opponent Chips -->
-    <div style="grid-row-start:1;display:flex"><h6>OPPONENT CHIPS:</h6></div>
+    <div style="grid-row-start:1;display:flex"><h5>OPPONENT CHIPS:</h5></div>
     <div id="opponentChips"></div>
 <!-- Opponent Hand -->
-    <div style="grid-row-start:3;display:flex"><h6>OPPONENT HAND:</h6></div>
+    <div style="grid-row-start:3;display:flex"><h5>OPPONENT HAND:</h5></div>
     <div id="opponentHand">
       <div class="handCard" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/2_Spades.png?raw=true">
       </div>
@@ -61,7 +60,7 @@ export default () => `
       <div class="handCard" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/6_Spades.png?raw=true">
       </div>
     </div>
-    <div style="grid-row-start:5;display:flex"><h6>OPPONENT DECK:</h6></div>
+    <div style="grid-row-start:5;display:flex"><h5>OPPONENT DECK:</h5></div>
     <div id="opponentDeck">
       <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
       <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
@@ -77,7 +76,7 @@ export default () => `
       <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
       <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
     </div>
-    <div style="grid-row-start:7;display:flex"><h6>OPPONENT DISCARD PILE:</h6></div>
+    <div style="grid-row-start:7;display:flex"><h5>OPPONENT DISCARD PILE:</h5></div>
     <div id="opponentDiscardPile"></div>
   </div>
 </div>

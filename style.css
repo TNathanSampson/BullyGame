@@ -153,7 +153,7 @@
   align-self: center;
   justify-self: center;
   color: white;
-  background-color: rgb(10, 68, 15);
+  background-color: rgb(15, 121, 24);
   font-size: 1.2rem;
   padding: 0.9rem;
   border-radius: 0.5rem;
@@ -235,7 +235,7 @@
   justify-items: right;
 }
 
-#opponentContainer > * > h6 {
+#opponentContainer > * > h5 {
   margin: 0.1em;
   align-self: flex-end;
 }

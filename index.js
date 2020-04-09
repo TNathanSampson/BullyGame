@@ -110,6 +110,8 @@ function dealCards(st) {
       let cardBack13 = cardBack.cloneNode(true);
       deckOfCards.append(cardBack13);
       this.className += " invisible";
+      let dealHand = document.querySelector(".dealHand");
+      dealHand.className = "dealHand";
     });
   }
 }
