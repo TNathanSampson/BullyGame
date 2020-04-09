@@ -73,11 +73,11 @@ class Player {
     this.chips = 0;
   }
   dealHand() {
+    function getRandomCard(numOfCards) {
+      return Math.floor(Math.random() * Math.floor(numOfCards));
+    }
     for (let i = 0; i < 5 && this.deck.length > 0; ++i) {
       let cardsInDeck = this.deck.length;
-      function getRandomCard(numOfCards) {
-        return Math.floor(Math.random() * Math.floor(numOfCards));
-      }
       let cardNumber = getRandomCard(cardsInDeck);
       this.hand.push(this.deck[cardNumber]);
       let removedCard = this.deck.splice(cardNumber, 1);

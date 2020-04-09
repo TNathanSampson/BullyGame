@@ -130,6 +130,39 @@
   margin: auto;
 }
 
+.dealDeck {
+  text-decoration: none;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  color: white;
+  background-color: rgb(10, 68, 15);
+  font-size: 1.2rem;
+  padding: 0.9rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  box-shadow: -2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  grid-column-start: 3;
+  grid-row-start: 1;
+  cursor: pointer;
+}
+
+.dealHand {
+  text-decoration: none;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  color: white;
+  background-color: rgb(10, 68, 15);
+  font-size: 1.2rem;
+  padding: 0.9rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  box-shadow: -2px 2px 4px 2px rgba(0, 0, 0, 0.5);
+  grid-column-start: 3;
+  grid-row-start: 1;
+  cursor: pointer;
+}
 /* Player Items */
 
 #playerContainer {
@@ -291,6 +324,10 @@
 }
 
 .card {
+  max-height: 17.75vh;
+}
+
+.cardOp {
   max-height: 17.75vh;
 }
 
