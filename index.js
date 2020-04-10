@@ -202,7 +202,6 @@ function dragNDropListener(st) {
       console.log(playerHearts.hand);
     });
   }
-}
 
   for (let k = 0; k < emptyInnerSquares.length; k++) {
     const innerSquare = emptyInnerSquares[k];
