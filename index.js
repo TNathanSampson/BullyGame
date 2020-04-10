@@ -21,7 +21,7 @@ function render(st = state.Home) {
   chooseYourDeck(st);
   playTheGame(st);
   goHome(st);
-  dragNDropListener();
+  //dragNDropListener();
   dealCards(st);
   dealPlayerHand(st);
 }
@@ -62,7 +62,6 @@ function playTheGame(st) {
         // setTimeout(function() {
         //   .style.display = "none";
         playerHearts.back = deckBack;
-        //console.log(playerHearts.deck);
         render(state.Board);
       });
     }
@@ -133,11 +132,12 @@ function dealPlayerHand(st) {
           drawnCard.draggable = true;
           cardImage.src = cardSource;
           drawnCard.append(cardImage);
+          console.log(drawnCard);
           playerHand.append(drawnCard);
         }
+        dragNDropListener(st);
       });
   }
-  dragNDropListener();
 }
 
 //Drag n Drop Listeners
@@ -145,6 +145,7 @@ function dragNDropListener(st) {
   const cardItems = document.querySelectorAll(".handCard");
   const emptySquares = document.querySelectorAll(".outerSquares");
   const emptyInnerSquares = document.querySelectorAll(".innerSquares");
+  console.log(cardItems);
 
   let draggedItem = null;
 
@@ -164,44 +165,46 @@ function dragNDropListener(st) {
         draggedItem = null;
       }, 0);
     });
+  }
 
-    for (let j = 0; j < emptySquares.length; j++) {
-      const square = emptySquares[j];
+  for (let j = 0; j < emptySquares.length; j++) {
+    const square = emptySquares[j];
 
-      square.addEventListener("dragover", function(ev) {
-        ev.preventDefault();
-      });
-      square.addEventListener("dragenter", function(ev) {
-        ev.preventDefault();
-        this.className += " hovered";
-      });
-      square.addEventListener("dragleave", function(ev) {
-        this.className = "outerSquares";
-      });
-      square.addEventListener("drop", function(ev) {
-        this.className = "outerSquares";
-        this.append(draggedItem);
-      });
-    }
+    square.addEventListener("dragover", function(ev) {
+      ev.preventDefault();
+    });
+    square.addEventListener("dragenter", function(ev) {
+      ev.preventDefault();
+      this.className += " hovered";
+    });
+    square.addEventListener("dragleave", function(ev) {
+      this.className = "outerSquares";
+    });
+    square.addEventListener("drop", function(ev) {
+      this.className = "outerSquares";
+      this.append(draggedItem);
+    });
+  }
 
-    for (let k = 0; k < emptyInnerSquares.length; k++) {
-      const innerSquare = emptyInnerSquares[k];
+  for (let k = 0; k < emptyInnerSquares.length; k++) {
+    const innerSquare = emptyInnerSquares[k];
 
-      innerSquare.addEventListener("dragover", function(ev) {
-        ev.preventDefault();
-      });
-      innerSquare.addEventListener("dragenter", function(ev) {
-        ev.preventDefault();
-        this.className += " hovered";
-      });
-      innerSquare.addEventListener("dragleave", function(ev) {
-        this.className = "innerSquares";
-      });
-      innerSquare.addEventListener("drop", function(ev) {
-        this.className = "innerSquares";
-        this.append(draggedItem);
-      });
-    }
+    innerSquare.addEventListener("dragover", function(ev) {
+      ev.preventDefault();
+    });
+    innerSquare.addEventListener("dragenter", function(ev) {
+      ev.preventDefault();
+      this.className += " hovered";
+    });
+    innerSquare.addEventListener("dragleave", function(ev) {
+      this.className = "innerSquares";
+    });
+    innerSquare.addEventListener("drop", function(ev) {
+      this.className = "innerSquares";
+      console.log(draggedItem);
+      this.append(draggedItem);
+      console.log(draggedItem);
+    });
   }
 }
 
