@@ -135,16 +135,15 @@ function dealPlayerHand(st) {
           drawnCard.draggable = true;
           cardImage.src = cardSource;
           drawnCard.append(cardImage);
-          console.log(drawnCard);
           playerHand.append(drawnCard);
           for (let j = 12; j >= playerHearts.deck.length; j--) {
-            console.log(playerDeck);
-            console.log(playerDeck[j]);
             let deckCard = playerDeck[j];
             deckCard.className += " invisible";
           }
         }
         dragNDropListener(st);
+        // console.log(handArray);
+        // console.log(playerHearts.hand);
       });
   }
 }
@@ -154,7 +153,6 @@ function dragNDropListener(st) {
   const cardItems = document.querySelectorAll(".handCard");
   const emptySquares = document.querySelectorAll(".outerSquares");
   const emptyInnerSquares = document.querySelectorAll(".innerSquares");
-  console.log(cardItems);
 
   let draggedItem = null;
 
@@ -211,6 +209,15 @@ function dragNDropListener(st) {
     innerSquare.addEventListener("drop", function(ev) {
       this.className = "innerSquares";
       this.append(draggedItem);
+      console.log(playerHearts.hand);
+      for (let m = 0; m < playerHearts.hand.length; m++) {
+        if (
+          draggedItem.getElementsByTagName("img")[0].src ===
+          playerHearts.hand[m][2]
+        ) {
+          playerHearts.hand.splice(m, 1);
+        }
+      }
       console.log(playerHearts.hand);
     });
   }
