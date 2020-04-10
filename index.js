@@ -122,8 +122,11 @@ function dealPlayerHand(st) {
       .querySelector(".dealPlayerHand")
       .addEventListener("click", function(ev) {
         playerHearts.dealHand();
-        const handArray = playerHearts.hand;
-        const playerHand = document.getElementById("playerHand");
+        let playerDeck = document
+          .getElementById("playerDeck")
+          .getElementsByTagName("img");
+        let handArray = playerHearts.hand;
+        let playerHand = document.getElementById("playerHand");
         for (let i = 0; i < handArray.length; i++) {
           let cardSource = handArray[i][2];
           let drawnCard = document.createElement("div");
@@ -134,6 +137,12 @@ function dealPlayerHand(st) {
           drawnCard.append(cardImage);
           console.log(drawnCard);
           playerHand.append(drawnCard);
+          for (let j = 12; j >= playerHearts.deck.length; j--) {
+            console.log(playerDeck);
+            console.log(playerDeck[j]);
+            let deckCard = playerDeck[j];
+            deckCard.className += " invisible";
+          }
         }
         dragNDropListener(st);
       });
@@ -201,9 +210,8 @@ function dragNDropListener(st) {
     });
     innerSquare.addEventListener("drop", function(ev) {
       this.className = "innerSquares";
-      console.log(draggedItem);
       this.append(draggedItem);
-      console.log(draggedItem);
+      console.log(playerHearts.hand);
     });
   }
 }
