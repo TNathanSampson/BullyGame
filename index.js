@@ -190,8 +190,19 @@ function dragNDropListener(st) {
     square.addEventListener("drop", function(ev) {
       this.className = "outerSquares";
       this.append(draggedItem);
+      console.log(playerHearts.hand);
+      for (let m = 0; m < playerHearts.hand.length; m++) {
+        if (
+          draggedItem.getElementsByTagName("img")[0].src ===
+          playerHearts.hand[m][2]
+        ) {
+          playerHearts.hand.splice(m, 1);
+        }
+      }
+      console.log(playerHearts.hand);
     });
   }
+}
 
   for (let k = 0; k < emptyInnerSquares.length; k++) {
     const innerSquare = emptyInnerSquares[k];
