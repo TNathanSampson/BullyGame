@@ -226,8 +226,8 @@
 }
 
 #playerChips > div > img {
-  width: auto;
-  max-height: 8vh;
+  height: auto;
+  max-width: 7vh;
 }
 
 #playerHand {
@@ -262,6 +262,8 @@
 .playerDiscardPile > div > img {
   width: auto;
   max-height: 15vh;
+  max-width: 10vh;
+  cursor: pointer;
 }
 
 /* Opponent Items */
@@ -334,9 +336,16 @@
   grid-row-start: 8;
 }
 
+.opponentDiscardPile > * {
+  width: auto;
+  max-height: 5vh;
+  cursor: pointer;
+}
+
 .opponentDiscardPile > div > img {
   width: auto;
   max-height: 15vh;
+  max-width: 11vh;
   cursor: pointer;
 }
 
@@ -370,8 +379,8 @@
 
 .innerSquares > div > img {
   width: auto;
-  max-height: 17.75vh;
-  max-width: 7vw;
+  max-height: 17.17vh;
+  max-width: 11vh;
 }
 
 .outerSquares {
@@ -384,9 +393,9 @@
 }
 
 .outerSquares > div > img {
-  width: 12vh;
-  max-height: 17.75vh;
-  max-width: 7vw;
+  width: auto;
+  max-height: 17.17vh;
+  max-width: 11vh;
 }
 
 .card {
