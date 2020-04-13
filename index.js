@@ -118,7 +118,7 @@ function dealCards(st) {
 
 function dealPlayerHand(st) {
   if (st.view === "Board") {
-    removeDropListeners(st);
+    // removeDropListeners(st);
     // let deleteDivs = document.getElementById("playerHand").children;
     // localStorage.removeItem(deleteDivs);
     document
@@ -144,7 +144,7 @@ function dealPlayerHand(st) {
             deckCard.className += " invisible";
           }
         }
-        dragNDropListener(st);
+        dragNDropListener();
         //console.log(handArray);
         // console.log(playerHearts.hand);
         console.log(playerHand);
@@ -154,7 +154,7 @@ function dealPlayerHand(st) {
 }
 
 //Drag n Drop Listeners
-function dragNDropListener(st) {
+function dragNDropListener() {
   const cardItems = document.querySelectorAll(".handCard");
   //const boardCardItems = document.querySelectorAll(".boardCard");
   const emptySquares = document.querySelectorAll(".outerSquares");
@@ -213,7 +213,7 @@ function dragNDropListener(st) {
     });
     square.addEventListener("drop", function(ev) {
       this.className = "outerSquares";
-      draggedItem.className = "boardCard";
+      draggedItem.className = "handCard";
       this.append(draggedItem);
       //console.log(playerHearts.hand);
       for (let m = 0; m < playerHearts.hand.length; m++) {
@@ -226,7 +226,6 @@ function dragNDropListener(st) {
       }
       //console.log(playerHearts.hand);
       console.log(draggedItem);
-      console.log(boardCardItems);
     });
   }
 
@@ -244,7 +243,7 @@ function dragNDropListener(st) {
       this.className = "innerSquares";
     });
     innerSquare.addEventListener("drop", function(ev) {
-      draggedItem.className = "boardCard";
+      draggedItem.className = "handCard";
       this.className = "innerSquares";
       this.append(draggedItem);
       //console.log(playerHearts.hand);
@@ -258,7 +257,6 @@ function dragNDropListener(st) {
       }
       //console.log(playerHearts.hand);
       console.log(draggedItem);
-      console.log(boardCardItems);
     });
   }
 }
