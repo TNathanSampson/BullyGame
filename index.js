@@ -150,9 +150,6 @@ function dealCards(st) {
 
       let dealHand = document.querySelector(".dealPlayerHand");
       dealHand.className = "dealPlayerHand";
-
-      let dealOpHand = document.querySelector(".dealOpHand");
-      dealOpHand.className = "dealOpHand";
     });
   }
 }
@@ -263,9 +260,16 @@ function dragNDropListener() {
           playerHearts.hand.splice(m, 1);
         }
       }
+      for (let n = 0; n < playerSpades.hand.length; n++) {
+        if (
+          draggedItem.getElementsByTagName("img")[0].src ===
+          playerSpades.hand[n][2]
+        ) {
+          playerSpades.hand.splice(n, 1);
+        }
+      }
     });
   }
-
   for (let k = 0; k < emptyInnerSquares.length; k++) {
     const innerSquare = emptyInnerSquares[k];
 
@@ -284,18 +288,25 @@ function dragNDropListener() {
       this.className = "innerSquares";
       this.append(draggedItem);
       //console.log(playerHearts.hand);
-      for (let n = 0; n < playerHearts.hand.length; n++) {
+      for (let p = 0; p < playerHearts.hand.length; p++) {
         if (
           draggedItem.getElementsByTagName("img")[0].src ===
-          playerHearts.hand[n][2]
+          playerHearts.hand[p][2]
         ) {
-          playerHearts.hand.splice(n, 1);
+          playerHearts.hand.splice(p, 1);
+        }
+      }
+      for (let n = 0; n < playerSpades.hand.length; n++) {
+        if (
+          draggedItem.getElementsByTagName("img")[0].src ===
+          playerSpades.hand[n][2]
+        ) {
+          playerSpades.hand.splice(n, 1);
         }
       }
     });
   }
 }
-
 //Player Class
 
 class Player {
