@@ -2,7 +2,6 @@ export default () => `
 <div id="pageContainer">
   <p class="homeButton"><a href="">QUIT?</a></p>
   <p class="dealDeck">DEAL!</p>
-  <p class="dealOpDeck">DEAL!</p>
   <p class="dealPlayerHand invisible">Deal Hand</p>
   <p class="dealOpHand invisible">Deal Hand</p>
   <div id="bullyBoard">
@@ -77,32 +76,9 @@ export default () => `
 <!-- Opponent Hand -->
     <div style="grid-row-start:3;display:flex"><h5>OPPONENT HAND:</h5></div>
     <div id="opponentHand">
-      <div class="handCard" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/2_Spades.png?raw=true">
-      </div>
-      <div class="handCard" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/3_Spades.png?raw=true">
-      </div>
-      <div class="handCard" draggable="true"><img  src="https://github.com/TNathanSampson/BullyGame/blob/master/images/4_Spades.png?raw=true">
-      </div>
-      <div class="handCard" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/5_Spades.png?raw=true">
-      </div>
-      <div class="handCard" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/6_Spades.png?raw=true">
-      </div>
     </div>
     <div style="grid-row-start:5;display:flex"><h5>OPPONENT DECK:</h5></div>
     <div id="opponentDeck">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
-      <img class="cardOp" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gray_back.png?raw=true">
     </div>
     <div style="grid-row-start:7;display:flex"><h5>OPPONENT DISCARD PILE:</h5></div>
     <div id="opponentDiscardPile"></div>
