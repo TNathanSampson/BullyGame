@@ -118,6 +118,9 @@ function dealCards(st) {
 
 function dealPlayerHand(st) {
   if (st.view === "Board") {
+    removeDropListeners(st);
+    // let deleteDivs = document.getElementById("playerHand").children;
+    // localStorage.removeItem(deleteDivs);
     document
       .querySelector(".dealPlayerHand")
       .addEventListener("click", function(ev) {
@@ -142,8 +145,10 @@ function dealPlayerHand(st) {
           }
         }
         dragNDropListener(st);
-        // console.log(handArray);
+        //console.log(handArray);
         // console.log(playerHearts.hand);
+        console.log(playerHand);
+        console.log(document.getElementById("bullyBoard"));
       });
   }
 }
@@ -151,10 +156,29 @@ function dealPlayerHand(st) {
 //Drag n Drop Listeners
 function dragNDropListener(st) {
   const cardItems = document.querySelectorAll(".handCard");
+  //const boardCardItems = document.querySelectorAll(".boardCard");
   const emptySquares = document.querySelectorAll(".outerSquares");
   const emptyInnerSquares = document.querySelectorAll(".innerSquares");
 
   let draggedItem = null;
+
+  // for (let h = 0; h < boardCardItems.length; h++) {
+  //   const bCard = cardItems[h];
+
+  //   bCard.addEventListener("dragstart", function(ev) {
+  //     draggedItem = bCard;
+  //     setTimeout(function() {
+  //       bCard.style.display = "none";
+  //     });
+  //   });
+
+  //   bCard.addEventListener("dragend", function() {
+  //     setTimeout(function() {
+  //       draggedItem.style.display = "block";
+  //       draggedItem = null;
+  //     }, 0);
+  //   });
+  // }
 
   for (let i = 0; i < cardItems.length; i++) {
     const card = cardItems[i];
@@ -163,7 +187,7 @@ function dragNDropListener(st) {
       draggedItem = card;
       setTimeout(function() {
         card.style.display = "none";
-      });
+      }, 0);
     });
 
     card.addEventListener("dragend", function() {
@@ -189,8 +213,9 @@ function dragNDropListener(st) {
     });
     square.addEventListener("drop", function(ev) {
       this.className = "outerSquares";
+      draggedItem.className = "boardCard";
       this.append(draggedItem);
-      console.log(playerHearts.hand);
+      //console.log(playerHearts.hand);
       for (let m = 0; m < playerHearts.hand.length; m++) {
         if (
           draggedItem.getElementsByTagName("img")[0].src ===
@@ -199,7 +224,9 @@ function dragNDropListener(st) {
           playerHearts.hand.splice(m, 1);
         }
       }
-      console.log(playerHearts.hand);
+      //console.log(playerHearts.hand);
+      console.log(draggedItem);
+      console.log(boardCardItems);
     });
   }
 
@@ -217,9 +244,87 @@ function dragNDropListener(st) {
       this.className = "innerSquares";
     });
     innerSquare.addEventListener("drop", function(ev) {
+      draggedItem.className = "boardCard";
       this.className = "innerSquares";
       this.append(draggedItem);
-      console.log(playerHearts.hand);
+      //console.log(playerHearts.hand);
+      for (let n = 0; n < playerHearts.hand.length; n++) {
+        if (
+          draggedItem.getElementsByTagName("img")[0].src ===
+          playerHearts.hand[n][2]
+        ) {
+          playerHearts.hand.splice(n, 1);
+        }
+      }
+      //console.log(playerHearts.hand);
+      console.log(draggedItem);
+      console.log(boardCardItems);
+    });
+  }
+}
+
+function removeDropListeners(st) {
+  const cardItems = document.querySelectorAll(".handCard");
+  const boardCardItems = document.querySelectorAll(".boardCard");
+  const emptySquares = document.querySelectorAll(".outerSquares");
+  const emptyInnerSquares = document.querySelectorAll(".innerSquares");
+
+  let draggedItem = null;
+
+  for (let h = 0; h < boardCardItems.length; h++) {
+    const bCard = cardItems[h];
+
+    bCard.removeEventListener("dragstart", function(ev) {
+      draggedItem = bCard;
+      setTimeout(function() {
+        bCard.style.display = "none";
+      });
+    });
+
+    bCard.removeEventListener("dragend", function() {
+      setTimeout(function() {
+        draggedItem.style.display = "block";
+        draggedItem = null;
+      }, 0);
+    });
+  }
+
+  for (let i = 0; i < cardItems.length; i++) {
+    const card = cardItems[i];
+
+    card.removeEventListener("dragstart", function(ev) {
+      draggedItem = card;
+      setTimeout(function() {
+        card.style.display = "none";
+      });
+    });
+
+    card.removeEventListener("dragend", function() {
+      setTimeout(function() {
+        draggedItem.style.display = "block";
+        draggedItem = null;
+      }, 0);
+    });
+  }
+
+  for (let j = 0; j < emptySquares.length; j++) {
+    const square = emptySquares[j];
+
+    square.removeEventListener("dragover", function(ev) {
+      ev.preventDefault();
+    });
+    square.removeEventListener("dragenter", function(ev) {
+      ev.preventDefault();
+      this.className += " hovered";
+    });
+    square.removeEventListener("dragleave", function(ev) {
+      this.className = "outerSquares";
+    });
+    square.removeEventListener("drop", function(ev) {
+      this.className = "outerSquares";
+      draggedItem.className = "boardCard";
+      this.append(draggedItem);
+      //console.log(playerHearts.hand);
       for (let m = 0; m < playerHearts.hand.length; m++) {
         if (
           draggedItem.getElementsByTagName("img")[0].src ===
@@ -228,7 +333,38 @@ function dragNDropListener(st) {
           playerHearts.hand.splice(m, 1);
         }
       }
-      console.log(playerHearts.hand);
+    });
+  }
+
+  for (let k = 0; k < emptyInnerSquares.length; k++) {
+    const innerSquare = emptyInnerSquares[k];
+
+    innerSquare.addEventListener("dragover", function(ev) {
+      ev.preventDefault();
+    });
+    innerSquare.addEventListener("dragenter", function(ev) {
+      ev.preventDefault();
+      this.className += " hovered";
+    });
+    innerSquare.addEventListener("dragleave", function(ev) {
+      this.className = "innerSquares";
+    });
+    innerSquare.addEventListener("drop", function(ev) {
+      draggedItem.className = "boardCard";
+      this.className = "innerSquares";
+      this.append(draggedItem);
+      //console.log(playerHearts.hand);
+      for (let n = 0; n < playerHearts.hand.length; n++) {
+        if (
+          draggedItem.getElementsByTagName("img")[0].src ===
+          playerHearts.hand[n][2]
+        ) {
+          playerHearts.hand.splice(n, 1);
+        }
+      }
+      //console.log(playerHearts.hand);
+      console.log(draggedItem);
+      console.log(boardCardItems);
     });
   }
 }
