@@ -359,6 +359,7 @@
 .innerSquares > div > img {
   width: auto;
   max-height: 17.75vh;
+  max-width: 7vw;
 }
 
 .outerSquares {
@@ -373,6 +374,7 @@
 .outerSquares > div > img {
   width: auto;
   max-height: 17.75vh;
+  max-width: 7vw;
 }
 
 .card {
@@ -396,7 +398,10 @@
 }
 
 .chip {
+  width: auto;
   max-height: 10vh;
+  max-width: 7vw;
+  cursor: pointer;
 }
 
 .hold {

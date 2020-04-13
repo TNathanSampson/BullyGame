@@ -210,11 +210,29 @@ function dealPlayerHand(st) {
 //Drag n Drop Listeners
 function dragNDropListener() {
   const cardItems = document.querySelectorAll(".handCard");
-  //const boardCardItems = document.querySelectorAll(".boardCard");
-  const emptySquares = document.querySelectorAll(".outerSquares");
+  const chipItems = document.querySelectorAll(".chip");
+  const emptyOuterSquares = document.querySelectorAll(".outerSquares");
   const emptyInnerSquares = document.querySelectorAll(".innerSquares");
 
   let draggedItem = null;
+
+  for (let c = 0; c < chipItems.length; c++) {
+    const chip = chipItems[c];
+
+    chip.addEventListener("dragstart", function(ev) {
+      draggedItem = chip;
+      setTimeout(function() {
+        chip.style.display = "none";
+      }, 0);
+    });
+
+    chip.addEventListener("dragend", function() {
+      setTimeout(function() {
+        draggedItem.style.display = "block";
+        draggedItem = null;
+      }, 0);
+    });
+  }
 
   for (let i = 0; i < cardItems.length; i++) {
     const card = cardItems[i];
@@ -234,8 +252,8 @@ function dragNDropListener() {
     });
   }
 
-  for (let j = 0; j < emptySquares.length; j++) {
-    const square = emptySquares[j];
+  for (let j = 0; j < emptyOuterSquares.length; j++) {
+    const square = emptyOuterSquares[j];
 
     square.addEventListener("dragover", function(ev) {
       ev.preventDefault();
@@ -249,7 +267,7 @@ function dragNDropListener() {
     });
     square.addEventListener("drop", function(ev) {
       this.className = "outerSquares";
-      draggedItem.className = "handCard";
+      draggedItem.classList.remove = "hovered";
       this.append(draggedItem);
       //console.log(playerHearts.hand);
       for (let m = 0; m < playerHearts.hand.length; m++) {
@@ -381,7 +399,7 @@ class Player {
     this.back = "";
     this.hand = [];
     this.discardPile = [];
-    this.chips = 0;
+    this.chips = [];
   }
   dealHand() {
     function getRandomCard(numOfCards) {
