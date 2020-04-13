@@ -251,12 +251,17 @@
   grid-row-start: 6;
 }
 
-#playerDiscardPile {
+.playerDiscardPile {
   align-items: flex-start;
   justify-items: flex-start;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(3%, 5%));
   grid-row-start: 8;
+}
+
+.playerDiscardPile > div > img {
+  width: auto;
+  max-height: 14vh;
 }
 
 /* Opponent Items */
@@ -319,7 +324,7 @@
   grid-row-start: 6;
 }
 
-#opponentDiscardPile {
+.opponentDiscardPile {
   align-items: flex-end;
   justify-items: right;
   display: grid;
@@ -372,7 +377,7 @@
 }
 
 .outerSquares > div > img {
-  width: auto;
+  width: 12vh;
   max-height: 17.75vh;
   max-width: 7vw;
 }

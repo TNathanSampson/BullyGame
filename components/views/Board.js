@@ -51,7 +51,7 @@ export default () => `
     <div id="playerDeck">
     </div>
     <div style="grid-row-start:7;display:flex"><h5>YOUR DISCARD PILE:</h5></div>
-    <div id="playerDiscardPile">
+    <div class="playerDiscardPile">
     </div>
   </div>
 <!-- Opponent Items -->
@@ -80,7 +80,7 @@ export default () => `
     <div id="opponentDeck">
     </div>
     <div style="grid-row-start:7;display:flex"><h5>OPPONENT DISCARD PILE:</h5></div>
-    <div id="opponentDiscardPile"></div>
+    <div class="opponentDiscardPile"></div>
   </div>
 </div>
 `;

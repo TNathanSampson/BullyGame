@@ -202,6 +202,8 @@ function dealPlayerHand(st) {
             opDeckCard.className += " invisible";
           }
         }
+        let dealHand = document.querySelector(".dealPlayerHand");
+        dealHand.className += " invisible";
         dragNDropListener();
       });
   }
@@ -213,6 +215,8 @@ function dragNDropListener() {
   const chipItems = document.querySelectorAll(".chip");
   const emptyOuterSquares = document.querySelectorAll(".outerSquares");
   const emptyInnerSquares = document.querySelectorAll(".innerSquares");
+  const emptyPile = document.querySelectorAll(".playerDiscardPile");
+  //const emptyOpPile = document.getElementById("opponentDiscardPile");
 
   let draggedItem = null;
 
@@ -286,6 +290,10 @@ function dragNDropListener() {
           playerSpades.hand.splice(n, 1);
         }
       }
+      if (playerHearts.hand.length === 0) {
+        let dealHand = document.querySelector(".dealPlayerHand");
+        dealHand.className += "dealPlayerHand";
+      }
     });
   }
   for (let k = 0; k < emptyInnerSquares.length; k++) {
@@ -324,6 +332,22 @@ function dragNDropListener() {
       }
     });
   }
+  console.log(emptyPile);
+  emptyPile[0].addEventListener("dragover", function empDragOver(ev) {
+    ev.preventDefault();
+  });
+  emptyPile[0].addEventListener("dragenter", function empDragEnter(ev) {
+    ev.preventDefault();
+    this.className += " hovered";
+  });
+  emptyPile[0].addEventListener("dragleave", function empDragLeave(ev) {
+    this.className = "playerDiscardPile";
+  });
+  emptyPile[0].addEventListener("drop", function empDrop(ev) {
+    this.className = "playerDiscardPile";
+    draggedItem.classList.remove = "hovered";
+    this.append(draggedItem);
+  });
 }
 //Player Class
 
