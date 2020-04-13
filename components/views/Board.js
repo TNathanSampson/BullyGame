@@ -3,7 +3,6 @@ export default () => `
   <p class="homeButton"><a href="">QUIT?</a></p>
   <p class="dealDeck">DEAL!</p>
   <p class="dealPlayerHand invisible">Deal Hand</p>
-  <p class="dealOpHand invisible">Deal Hand</p>
   <div id="bullyBoard">
   <!-- 1st -->
     <div id="a4" class="outerSquares dropSpace"></div>

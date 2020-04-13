@@ -166,11 +166,17 @@ function dealPlayerHand(st) {
       .querySelector(".dealPlayerHand")
       .addEventListener("click", function(ev) {
         playerHearts.dealHand();
+        playerSpades.dealHand();
         let playerDeck = document
           .getElementById("playerDeck")
           .getElementsByTagName("img");
+        let opponentDeck = document
+          .getElementById("opponentDeck")
+          .getElementsByTagName("img");
         let handArray = playerHearts.hand;
+        let opHandArray = playerSpades.hand;
         let playerHand = document.getElementById("playerHand");
+        let opponentHand = document.getElementById("opponentHand");
         for (let i = 0; i < handArray.length; i++) {
           let cardSource = handArray[i][2];
           let drawnCard = document.createElement("div");
@@ -183,6 +189,20 @@ function dealPlayerHand(st) {
           for (let j = 12; j >= playerHearts.deck.length; j--) {
             let deckCard = playerDeck[j];
             deckCard.className += " invisible";
+          }
+        }
+        for (let k = 0; k < opHandArray.length; k++) {
+          let opCardSource = opHandArray[k][2];
+          let opDrawnCard = document.createElement("div");
+          let opCardImage = document.createElement("img");
+          opDrawnCard.className = "handCard";
+          opDrawnCard.draggable = true;
+          opCardImage.src = opCardSource;
+          opDrawnCard.append(opCardImage);
+          opponentHand.append(opDrawnCard);
+          for (let m = 12; m >= playerSpades.deck.length; m--) {
+            let opDeckCard = opponentDeck[m];
+            opDeckCard.className += " invisible";
           }
         }
         dragNDropListener();
