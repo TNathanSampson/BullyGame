@@ -398,6 +398,7 @@
 }
 
 .chip {
+  align-self: flex-start;
   width: auto;
   max-height: 10vh;
   max-width: 7vw;
