@@ -80,7 +80,8 @@ export default () => `
     <div id="opponentDeck">
     </div>
     <div style="grid-row-start:7;display:flex"><h5>OPPONENT DISCARD PILE:</h5></div>
-    <div class="opponentDiscardPile"></div>
+    <div class="opponentDiscardPile">
+    </div>
   </div>
 </div>
 `;

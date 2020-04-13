@@ -216,7 +216,9 @@ function dragNDropListener() {
   const emptyOuterSquares = document.querySelectorAll(".outerSquares");
   const emptyInnerSquares = document.querySelectorAll(".innerSquares");
   const emptyPile = document.querySelectorAll(".playerDiscardPile");
-  //const emptyOpPile = document.getElementById("opponentDiscardPile");
+  //const emptyOpPile = document.querySelectorAll(".opponentDiscardPile");
+  // console.log(emptyPile);
+  // console.log(emptyOpPile);
 
   let draggedItem = null;
 
@@ -332,23 +334,49 @@ function dragNDropListener() {
       }
     });
   }
-  console.log(emptyPile);
+  function opDiscardListener() {
+    const emptyOpPile = document.querySelector(".opponentDiscardPile");
+    console.log(emptyOpPile);
+    emptyOpPile.addEventListener("dragover", function empDragOver(ev) {
+      ev.preventDefault();
+    });
+
+    emptyOpPile.addEventListener("dragenter", function empDragEnter(ev) {
+      ev.preventDefault();
+      this.className += " hovered";
+    });
+
+    emptyOpPile.addEventListener("dragleave", function empDragLeave(ev) {
+      this.className = "opponentDiscardPile";
+    });
+
+    emptyOpPile.addEventListener("drop", function empDrop(ev) {
+      this.className = "opponentDiscardPile";
+      draggedItem.classList.remove = "hovered";
+      this.append(draggedItem);
+    });
+  }
   emptyPile[0].addEventListener("dragover", function empDragOver(ev) {
     ev.preventDefault();
   });
+
   emptyPile[0].addEventListener("dragenter", function empDragEnter(ev) {
     ev.preventDefault();
     this.className += " hovered";
   });
+
   emptyPile[0].addEventListener("dragleave", function empDragLeave(ev) {
     this.className = "playerDiscardPile";
   });
+
   emptyPile[0].addEventListener("drop", function empDrop(ev) {
     this.className = "playerDiscardPile";
     draggedItem.classList.remove = "hovered";
     this.append(draggedItem);
   });
+  opDiscardListener();
 }
+
 //Player Class
 
 class Player {
