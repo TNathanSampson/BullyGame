@@ -2,7 +2,9 @@ export default () => `
 <div id="pageContainer">
   <p class="homeButton"><a href="">QUIT?</a></p>
   <p class="dealDeck">DEAL!</p>
+  <p class="dealOpDeck">DEAL!</p>
   <p class="dealPlayerHand invisible">Deal Hand</p>
+  <p class="dealOpHand invisible">Deal Hand</p>
   <div id="bullyBoard">
   <!-- 1st -->
     <div id="a4" class="outerSquares dropSpace"></div>
@@ -29,7 +31,20 @@ export default () => `
   <div id="playerContainer">
   <!-- Player Chips -->
     <div style="grid-row-start:1;display:flex"><h5>YOUR CHIPS:</h5></div>
-    <div id="playerChips"></div>
+    <div id="playerChips">
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
+    </div>
   <!-- Player Hand -->
     <div style="grid-row-start:3;display:flex"><h5>YOUR HAND:</h5></div>
     <div id="playerHand">
@@ -45,7 +60,20 @@ export default () => `
   <div id="opponentContainer">
   <!-- Opponent Chips -->
     <div style="grid-row-start:1;display:flex"><h5>OPPONENT CHIPS:</h5></div>
-    <div id="opponentChips"></div>
+    <div id="opponentChips">
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+      <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/spade_poker_chip.png?raw=true"></div>
+    </div>
 <!-- Opponent Hand -->
     <div style="grid-row-start:3;display:flex"><h5>OPPONENT HAND:</h5></div>
     <div id="opponentHand">
