@@ -332,6 +332,10 @@ function dragNDropListener() {
           playerSpades.hand.splice(n, 1);
         }
       }
+      if (playerHearts.hand.length === 0) {
+        let dealHand = document.querySelector(".dealPlayerHand");
+        dealHand.className += "dealPlayerHand";
+      }
     });
   }
   function opDiscardListener() {
