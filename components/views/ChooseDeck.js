@@ -10,5 +10,10 @@ export default () => `
       <a href=""><img id="green_back" class="deck" src="https://github.com/TNathanSampson/BullyGame/blob/master/images/green_back.png?raw=true" alt="Green Deck"></a>
     </div>
   </div>
+  <div>
+  <p class="homeButton">
+  <a href="">Home</a>
+  </p>
+  </div>
 </section>
 `;

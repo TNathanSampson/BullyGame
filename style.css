@@ -34,6 +34,13 @@
   box-shadow: -3px 3px 4px 2px rgba(0, 0, 0, 0.4);
 }
 
+#instructionButton {
+  grid-column-start: 3;
+  grid-row-start: 3;
+  justify-self: center;
+  align-self: center;
+}
+
 #instructionButton > a {
   text-decoration: none;
   color: rgb(0, 0, 0);
@@ -171,8 +178,8 @@
   border-radius: 0.5rem;
   margin: 1rem;
   box-shadow: -2px 2px 4px 2px rgba(0, 0, 0, 0.5);
-  grid-column-start: 3;
-  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-start: 4;
   cursor: pointer;
 }
 
@@ -206,8 +213,8 @@
   border-radius: 0.5rem;
   margin: 1rem;
   box-shadow: -2px 2px 4px 2px rgba(0, 0, 0, 0.5);
-  grid-column-start: 3;
-  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-start: 4;
   cursor: pointer;
 }
 

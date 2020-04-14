@@ -28,7 +28,7 @@ function render(st = state.Home) {
 
 //Event Listeners: Page Buttons
 function displayInstructions(st) {
-  if (st.view === "Home") {
+  if (st.view === "Home" || st.view === "Board") {
     document
       .querySelector("#instructionButton a")
       .addEventListener("click", event => {
@@ -74,7 +74,11 @@ function playTheGame(st) {
 }
 
 function goHome(st) {
-  if (st.view === "Instructions" || st.view === "Board") {
+  if (
+    st.view === "Instructions" ||
+    st.view === "Board" ||
+    st.view === "ChooseDeck"
+  ) {
     document.querySelector(".homeButton a").addEventListener("click", event => {
       event.preventDefault();
       render(state.Home);

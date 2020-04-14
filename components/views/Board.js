@@ -2,8 +2,7 @@ export default () => `
 <div style="background-color:rgb(30, 88, 25)">
   <div id="pageContainer">
     <p id="quitButton" class="homeButton"><a href="">QUIT?</a></p>
-    <p class="dealDeck">DEAL!</p>
-    <p class="dealPlayerHand invisible">Deal Hand</p>
+    <p id="instructionButton"><a href="">Instructions</a></p>
     <div id="bullyBoard">
     <!-- 1st -->
       <div id="a4" class="outerSquares dropSpace"></div>
@@ -29,6 +28,8 @@ export default () => `
   <!-- Player Items -->
     <div id="playerContainer">
     <!-- Player Chips -->
+      <p class="dealDeck">DEAL!</p>
+      <p class="dealPlayerHand invisible">Deal Hand</p>
       <div style="grid-row-start:1;display:flex"><h5>YOUR CHIPS:</h5></div>
       <div id="playerChips">
         <div class="chip" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/gold_poker_chip.png?raw=true"></div>
