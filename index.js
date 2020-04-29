@@ -21,7 +21,6 @@ function render(st = state.Home) {
   chooseYourDeck(st);
   playTheGame(st);
   goHome(st);
-  //dragNDropListener();
   dealCards(st);
   dealPlayerHand(st);
 }
@@ -33,7 +32,7 @@ function displayInstructions(st) {
       .querySelector("#instructionButton a")
       .addEventListener("click", event => {
         event.preventDefault();
-        render(state.Instructions);
+        window.open("Instructions");
       });
   }
 }
@@ -476,5 +475,3 @@ class Player {
 
 const playerHearts = new Player("Hearts");
 const playerSpades = new Player("Spades");
-
-// <div class="handCard" draggable="true"><img src="https://github.com/TNathanSampson/BullyGame/blob/master/images/2_Hearts.png?raw=true"></div>
